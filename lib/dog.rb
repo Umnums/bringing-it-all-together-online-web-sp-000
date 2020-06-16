@@ -41,6 +41,6 @@ class Dog
     obj = self.new(attrs)
     obj.save
   end
-    
+
 
 end

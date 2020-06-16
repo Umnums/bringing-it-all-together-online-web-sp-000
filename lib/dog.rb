@@ -53,7 +53,7 @@ class Dog
     id = ?
     LIMIT 1
     SQL
-    row = DB[:conn].execute(sql, id)
+    row = DB[:conn].execute(sql, id).first
     self.new_from_db(row)
   end
 

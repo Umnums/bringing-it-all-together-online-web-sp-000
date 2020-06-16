@@ -42,5 +42,10 @@ class Dog
     obj.save
   end
 
+  def self.new_from_db(row)
+    hash = {:name => row[1], :breed => row[2], :id => row[0]}
+    self.new(hash)
+  end
+
 
 end

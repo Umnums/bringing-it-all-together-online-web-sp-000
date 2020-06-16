@@ -61,7 +61,7 @@ class Dog
     sql = <<-SQL
     SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
-    dog = DB[:conn].execute(sql, name:, name:)
+    dog = DB[:conn].execute(sql, name:, breed:)
     if dog.empty?
       song = self.create(hash)
     else

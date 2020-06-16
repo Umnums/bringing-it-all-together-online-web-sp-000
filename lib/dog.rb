@@ -65,6 +65,9 @@ class Dog
     if dog.empty?
       song = self.create(:name, :breed)
     else
-
+      dog_data = dog[0]
+      obj = self.new_from_db(dog_data)
+    end
+  end
 
 end

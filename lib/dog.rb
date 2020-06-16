@@ -65,6 +65,6 @@ class Dog
     if dog.empty?
       song = self.create(:name, :breed)
     else
-      
+
 
 end

@@ -78,4 +78,11 @@ class Dog
     self.new_from_db(dog.first)
   end
 
+  def update
+    sql = <<-SQL
+    UPDATE songs SET name = ?, breed = ? WHERE id = ?
+    SQL
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
+
 end

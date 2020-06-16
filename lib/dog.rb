@@ -63,7 +63,7 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, name, breed)
     if dog.empty?
-      song = self.create(:name, :breed)
+      song = self.create(hash)
     else
       dog_data = dog[0]
       obj = self.new_from_db(dog_data)
